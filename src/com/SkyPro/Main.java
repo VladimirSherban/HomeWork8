@@ -8,7 +8,7 @@ public class Main {
     }
 
     public static void task1() {
-        System.out.println("\nЗадача_1");
+        System.out.println("\nЗадача 1-2");
         int[] spring = new int[3];
         spring[0] = 1;
         spring[1] = 2;
@@ -20,23 +20,36 @@ public class Main {
         System.out.println(Arrays.toString(index));
         System.out.println(Arrays.toString(id));
 
+        System.out.println("Задача 3");
         for (int i = spring.length - 1; i >= 0; i--) {
-            System.out.print(spring[i] + ", ");
+            System.out.print(spring[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
         for (int i = index.length - 1; i >= 0; i--) {
-            System.out.print(index[i] + ", ");
+            System.out.print(index[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
         for (int i = id.length - 1; i >= 0; i--) {
-            System.out.print(id[i] + ", ");
+            System.out.print(id[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
         }
-        System.out.println();
+        System.out.println("\nЗадача 4");
         for (int i = 0; i < spring.length; i++) {
-            if (spring[i] % 3 == 1 || spring[i] == 1) {
+            if (spring[i] % 2 != 0) {
                 spring[i] = spring[i] + 1;
             }
-            System.out.print(spring[i] + ", ");
+            System.out.print(spring[i]);
+            if (i != spring.length - 1) {
+                System.out.print(",  ");
+            }
         }
     }
 }
